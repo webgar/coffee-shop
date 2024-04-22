@@ -1,0 +1,33 @@
+.aboutItWrapper {
+	gap: 55px;
+}
+.rightBlock {
+	max-width: 418px;
+}
+.countryInfo,
+.description,
+.priceInfo {
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+}
+.countryInfo span:first-of-type,
+.description span:first-of-type {
+	font-weight: 700;
+}
+
+.description {
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+}
+.countryInfo {
+	margin-top: 26px;
+	margin-bottom: 16px;
+}
+.priceInfo {
+	margin-top: 16px;
+}
+.priceInfo span:last-child {
+	font-weight: 700;
+}

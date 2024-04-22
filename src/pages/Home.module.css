@@ -1,0 +1,47 @@
+.homeHeader {
+	background: url('../assets/img/home/main-bg.jpg') center center / cover
+		no-repeat;
+	padding: 30px 150px;
+	color: #ffffff;
+}
+.homeHeaderTitle {
+	margin-top: 111px;
+	text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.homeBeans path {
+	fill: #fff;
+}
+.homeBeans::after,
+.homeBeans::before {
+	border: 1px solid #ffffff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.about {
+	padding: 80px 100px;
+}
+.about p {
+	width: 590px;
+	font-size: 14px;
+	margin: 0 auto;
+	line-height: 20px;
+}
+.about p:first-of-type {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+.ourBest {
+	background: url('../assets/img/home/home-section.jpg') center center / cover
+		no-repeat;
+	padding: 80px 0 110px 0;
+	text-align: center;
+}
+.ourBestTitle {
+	font-weight: 400;
+	font-size: 24px;
+	margin-bottom: 39px;
+}
+.ourBestCards {
+	display: flex;
+	justify-content: center;
+	gap: 71px;
+}

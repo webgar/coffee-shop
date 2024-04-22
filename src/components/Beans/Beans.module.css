@@ -1,0 +1,21 @@
+.beans {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	margin: 20px auto 0 auto;
+}
+.beans::after,
+.beans::before {
+	content: '';
+	position: absolute;
+	width: 60px;
+	bottom: 15px;
+	border: 1px solid #000;
+}
+
+.beans::after {
+	right: -88px;
+}
+.beans::before {
+	left: -88px;
+}

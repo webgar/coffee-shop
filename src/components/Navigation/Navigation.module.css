@@ -1,0 +1,29 @@
+.navigation {
+	display: flex;
+	align-items: end;
+}
+
+.logoLink {
+	display: block;
+	width: 35px;
+	height: 35px;
+}
+.menuList {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+.menuLink {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 17px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.3s ease;
+}
+.menuLink:hover {
+	border-bottom: 1px solid #fff;
+}
+.menuLink.active {
+	color: rgb(243, 170, 243);
+	border-bottom: 1px solid rgb(243, 170, 243);
+}
