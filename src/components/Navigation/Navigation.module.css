@@ -4,10 +4,11 @@
 }
 
 .logoLink {
-	display: block;
+	display: inline-block;
 	width: 35px;
 	height: 35px;
 }
+
 .menuList {
 	display: flex;
 	align-items: center;
@@ -27,3 +28,31 @@
 	color: rgb(243, 170, 243);
 	border-bottom: 1px solid rgb(243, 170, 243);
 }
+
+@media screen and (max-width: 556px) {
+	.navigation {
+		align-items: start;
+		margin-bottom: 60px;
+	}
+
+	.menu {
+		position: absolute;
+		right: 50%;
+		transform: translateX(50%);
+		top: -200;
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+	}
+	.active {
+		top: 0;
+		opacity: 1;
+	}
+	.menuList {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.menuLink {
+		font-size: 14px;
+	}
+}
+

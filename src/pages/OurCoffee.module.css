@@ -1,17 +1,7 @@
 .aboutWrapper {
 	gap: 80px;
 }
-.rightBlock {
-	max-width: 346px;
-}
-.rightBlock p {
-	font-size: 14px;
-	line-height: 20px;
-}
-.rightBlock p:nth-child(2) {
-	margin-top: 26px;
-	margin-bottom: 20px;
-}
+
 .aboutWrapper::after {
 	content: '';
 	width: 240px;
@@ -54,4 +44,32 @@ input {
 }
 .filterBtn2 {
 	border-radius: 0 4px 4px 0;
+}
+@media screen and (max-width: 962px) {
+	.aboutWrapper {
+		gap: 30px;
+	}
+}
+
+@media screen and (max-width: 694px) {
+	.aboutWrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.aboutWrapper::after {
+		right: 50%;
+		transform: translateX(50%);
+	}
+	.filterBlock {
+		padding: 40px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+	}
+}
+@media screen and (max-width: 390px) {
+	.filterBlock {
+		padding: 40px 20px;
+	}
 }

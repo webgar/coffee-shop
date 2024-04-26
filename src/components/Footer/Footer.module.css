@@ -7,3 +7,11 @@
 .footer path {
 	fill: #000;
 }
+@media screen and (max-width: 556px) {
+	.footer {
+		padding: 20px 30px;
+	}
+	.footerNav {
+		display: none;
+	}
+}

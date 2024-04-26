@@ -6,7 +6,8 @@ import Wrapper from '../components/Wrapper/Wrapper'
 import styles from './AboutCard.module.css'
 
 const AboutCard = ({ data }) => {
-	const { id } = useParams() 
+	const { category, id } = useParams() 
+	console.log(category);
 
 	const card = data.find(card => card.id === parseInt(id))
 	if (!card) return null

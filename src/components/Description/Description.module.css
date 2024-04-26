@@ -25,3 +25,11 @@
 	background-color: #fff;
 	color: #000;
 }
+@media screen and (max-width: 556px) {
+	.description {
+		margin: 0 ;
+	}
+	.description p {
+		font-size: 18px;
+	}
+}

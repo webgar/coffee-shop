@@ -1,23 +1,19 @@
 import { useEffect, useState } from 'react'
+
 import image from '../assets/img/our/about-our-beans.jpg'
 import AboutPic from '../components/AboutPic/AboutPic'
-import AboutTitle from '../components/AboutTitle/AboutTitle'
+
 import Button from '../components/Button/Button'
 import CardList from '../components/CardList/CardList'
 import OurHeader from '../components/OurHeader/OurHeader'
 import Wrapper from '../components/Wrapper/Wrapper'
 import styles from './OurCoffee.module.css'
-const OurCoffee = ({ data }) => {
+import { RightBlock } from '../components/RightBlock/RightBlock'
+const OurCoffee = ({ data, onCardClick }) => {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [filteredCards, setFilteredCards] = useState(data)
 	const [originalData] = useState(data)
-	const [selectedCardId, setSelectedCardId] = useState(null)
 
-	const handleCardClick = cardId => {
-		setSelectedCardId(cardId)
-		
-	}
-	
 	useEffect(() => {
 		setFilteredCards(data)
 	}, [data])
@@ -41,7 +37,6 @@ const OurCoffee = ({ data }) => {
 			setFilteredCards(updatedFilteredCards)
 		}
 	}
-	
 
 	return (
 		<>
@@ -49,22 +44,7 @@ const OurCoffee = ({ data }) => {
 			<main>
 				<Wrapper aboutClasses={styles.aboutWrapper}>
 					<AboutPic src={image} alt='girl' width='272px' height='355px' />
-					<div className={styles.rightBlock}>
-						<AboutTitle>About our beans</AboutTitle>
-						<p>
-							Extremity sweetness difficult behaviour he of. On disposal of as
-							landlord horrible.
-						</p>
-						<p>
-							Afraid at highly months do things on at. Situation recommend
-							objection do intention so questions.
-						</p>
-						<p>
-							As greatly removed calling pleased improve an. Last ask him old
-							feel met spot shy want. Children me laughing we prospect answered
-							followed. At it went is song that held help face.
-						</p>
-					</div>
+					<RightBlock>About our beans</RightBlock>
 				</Wrapper>
 
 				<section className={styles.filterBlock}>
@@ -97,8 +77,11 @@ const OurCoffee = ({ data }) => {
 						</div>
 					</div>
 				</section>
-				<section>
-					<CardList data={filteredCards}  onCardClick={handleCardClick} />
+				<section className={styles.cardSection}>
+					<CardList
+						data={filteredCards}
+						onCardClick={onCardClick}
+					/>
 				</section>
 			</main>
 		</>

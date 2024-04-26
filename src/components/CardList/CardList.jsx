@@ -1,15 +1,27 @@
+import { Link, useLocation } from 'react-router-dom'
 import Card from '../Card/Card'
 import styles from './CardList.module.css'
 
-const CardList = ({ data, onCardClick }) => {
+const CardList = ({ data, onCardClick, path }) => {
+	const location = useLocation()
+
 	return (
 		<div className={styles.cardList}>
-			{data.map(item => (
-				<Card
-					key={item.id}
-					{...item}
-					onCardClick={() => onCardClick(item.id)}
-				/>
+			{data.map(card => (
+				<Link
+					key={card.id}
+					to={`${location.pathname}/${card.id}`}
+					className={styles.link}
+				>
+					<Card
+						path={path}
+						key={card.id}
+						{...card}
+						onCardClick={() => {
+							onCardClick(card.id)
+						}}
+					/>
+				</Link>
 			))}
 		</div>
 	)

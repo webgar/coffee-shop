@@ -6,7 +6,7 @@
 }
 .homeHeaderTitle {
 	margin-top: 111px;
-	text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .homeBeans path {
 	fill: #fff;
@@ -20,7 +20,7 @@
 	padding: 80px 100px;
 }
 .about p {
-	width: 590px;
+	max-width: 590px;
 	font-size: 14px;
 	margin: 0 auto;
 	line-height: 20px;
@@ -44,4 +44,44 @@
 	display: flex;
 	justify-content: center;
 	gap: 71px;
+}
+
+@media screen and (max-width: 962px) {
+	.homeHeader {
+		padding: 30px 50px;
+	}
+}
+@media screen and (max-width: 864px) {
+	.about {
+		padding: 80px 50px;
+	}
+
+	.ourBestCards {
+		gap: 30px;
+	}
+}
+
+@media screen and (max-width: 762px) {
+	.homeHeader {
+		padding: 30px 30px;
+	}
+	.ourBestCards {
+		flex-wrap: wrap;
+		padding: 0 20px;
+	}
+}
+@media screen and (max-width: 556px) {
+	.homeHeader {
+		padding: 30px 30px;
+	}
+	.homeHeaderTitle {
+		margin-top: 0px;
+		font-size: 20px;
+	}
+	.about {
+		padding: 30px 20px;
+	}
+	.ourBest {
+		padding: 30px 0 50px 0;
+	}
 }

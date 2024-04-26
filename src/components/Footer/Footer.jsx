@@ -5,7 +5,7 @@ import styles from './Footer.module.css'
 const Footer = () => {
 	return (
 		<footer className={styles.footer}>
-			<Navigation />
+			<Navigation displayNoneMenu={styles.footerNav}/>
 			<Beans />
 		</footer>
 	)

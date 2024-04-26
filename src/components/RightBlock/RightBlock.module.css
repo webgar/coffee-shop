@@ -1,0 +1,16 @@
+.rightBlock {
+	max-width: 346px;
+}
+.rightBlock p {
+	font-size: 14px;
+	line-height: 20px;
+}
+.rightBlock p:first-of-type {
+	margin-top: 26px;
+	margin-bottom: 20px;
+}
+@media screen and (max-width: 694px) {
+	.rightBlock {
+		margin: 0 auto;
+	}
+}

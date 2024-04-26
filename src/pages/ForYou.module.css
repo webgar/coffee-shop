@@ -1,0 +1,39 @@
+.forYouHeader {
+	background: url('../../src/assets/img/for-you/for-you.jpg') center center /
+		cover no-repeat;
+	padding: 30px 150px 84px;
+	color: #ffffff;
+}
+.forYouWrapper {
+	gap: 80px;
+}
+.forYouWrapper::after {
+	content: '';
+	width: 240px;
+	height: 1px;
+	background-color: #000;
+	position: absolute;
+	bottom: 0;
+}
+.forYouSection {
+	padding-top: 60px;
+}
+@media screen and (max-width: 962px) {
+	.forYouHeader {
+		padding: 30px 30px;
+	}
+	.forYouWrapper {
+		gap: 30px;
+	}
+}
+@media screen and (max-width: 694px) {
+	.forYouWrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.forYouWrapper::after {
+		right: 50%;
+		transform: translateX(50%);
+	}
+}
+
