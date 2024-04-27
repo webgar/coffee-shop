@@ -6,7 +6,7 @@ import Description from '../components/Description/Description'
 import Header from '../components/Header/Header'
 import styles from './Home.module.css'
 
-const Home = ({ data, onCardClick }) => {
+const Home = ({ data }) => {
 	const recommended = data.filter(item => item.recommended)
 	return (
 		<>
@@ -48,7 +48,7 @@ const Home = ({ data, onCardClick }) => {
 								key={card.id}
 								className={styles.link}
 							>
-								<Card key={card.id} {...card} onCardClick={onCardClick} />
+								<Card key={card.id} {...card}  />
 							</Link>
 						))}
 					</div>

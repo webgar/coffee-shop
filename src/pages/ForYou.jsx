@@ -4,10 +4,9 @@ import CardList from '../components/CardList/CardList'
 import Header from '../components/Header/Header'
 import { RightBlock } from '../components/RightBlock/RightBlock'
 import Wrapper from '../components/Wrapper/Wrapper'
-import { data } from '../data/data'
 import styles from './ForYou.module.css'
 
-const ForYou = ({ onCardClick }) => {
+const ForYou = ({ data }) => {
 	return (
 		<>
 			<header className={styles.forYouHeader}>
@@ -22,7 +21,7 @@ const ForYou = ({ onCardClick }) => {
 					<RightBlock>About our goods</RightBlock>
 				</Wrapper>
 				<section className={styles.forYouSection}>
-					<CardList onCardClick={onCardClick} data={data} />
+					<CardList  data={data} />
 				</section>
 			</main>
 		</>

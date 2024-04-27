@@ -1,8 +1,8 @@
 import { useState } from 'react'
-
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes, useMatch } from 'react-router-dom'
 import './App.css'
 import Footer from './components/Footer/Footer'
+import { CardContext } from './components/context/Context'
 import { data } from './data/data'
 import AboutCard from './pages/AboutCard'
 import ForYou from './pages/ForYou'
@@ -11,30 +11,37 @@ import NotFound from './pages/NotFound'
 import OurCoffee from './pages/OurCoffee'
 
 function App() {
-	const [selectedCardId, setSelectedCardId] = useState(null)
+	const [selectedCardId, setSelectedCardId] = useState('')
 	const handleCardClick = cardId => {
 		setSelectedCardId(cardId)
 	}
+
+	const match = useMatch('*')
+	const isNotFoundPage = match != null
+
 	return (
-		<BrowserRouter>
+		<CardContext.Provider value={{ selectedCardId, setSelectedCardId, handleCardClick }}>
 			<div className='app'>
 				<Routes>
-					<Route path='/' element={<Home onCardClick={handleCardClick} data={data} />} />
+					<Route
+						path='/'
+						element={<Home data={data} />}
+					/>
 					<Route
 						path='/coffee'
-						element={<OurCoffee onCardClick={handleCardClick} data={data} />}
+						element={<OurCoffee data={data} />}
 					/>
 					<Route
 						path='/for-you'
-						element={<ForYou onCardClick={handleCardClick} data={data} />}
+						element={<ForYou data={data} />}
 					/>
 					<Route path='/:category/:id' element={<AboutCard data={data} />} />
-
-					<Route element={<NotFound />} />
+					<Route path='*' element={<NotFound />} />
 				</Routes>
-				<Footer />
+
+				{!isNotFoundPage && <Footer />}
 			</div>
-		</BrowserRouter>
+		</CardContext.Provider>
 	)
 }
 

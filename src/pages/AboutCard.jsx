@@ -1,4 +1,5 @@
-import { useParams } from 'react-router-dom'
+import { useContext } from 'react'
+import { CardContext } from '../components/context/Context'
 import AboutPic from '../components/AboutPic/AboutPic'
 import AboutTitle from '../components/AboutTitle/AboutTitle'
 import OurHeader from '../components/OurHeader/OurHeader'
@@ -6,10 +7,8 @@ import Wrapper from '../components/Wrapper/Wrapper'
 import styles from './AboutCard.module.css'
 
 const AboutCard = ({ data }) => {
-	const { category, id } = useParams() 
-	console.log(category);
-
-	const card = data.find(card => card.id === parseInt(id))
+	const { selectedCardId } = useContext(CardContext)
+	const card = data.find(card => card.id === selectedCardId)
 	if (!card) return null
 	return (
 		<>

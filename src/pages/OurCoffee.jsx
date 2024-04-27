@@ -9,7 +9,7 @@ import OurHeader from '../components/OurHeader/OurHeader'
 import Wrapper from '../components/Wrapper/Wrapper'
 import styles from './OurCoffee.module.css'
 import { RightBlock } from '../components/RightBlock/RightBlock'
-const OurCoffee = ({ data, onCardClick }) => {
+const OurCoffee = ({ data }) => {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [filteredCards, setFilteredCards] = useState(data)
 	const [originalData] = useState(data)
@@ -80,7 +80,6 @@ const OurCoffee = ({ data, onCardClick }) => {
 				<section className={styles.cardSection}>
 					<CardList
 						data={filteredCards}
-						onCardClick={onCardClick}
 					/>
 				</section>
 			</main>

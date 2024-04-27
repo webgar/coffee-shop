@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import Card from '../Card/Card'
 import styles from './CardList.module.css'
 
-const CardList = ({ data, onCardClick, path }) => {
+const CardList = ({ data, path }) => {
 	const location = useLocation()
 
 	return (
@@ -16,10 +16,7 @@ const CardList = ({ data, onCardClick, path }) => {
 					<Card
 						path={path}
 						key={card.id}
-						{...card}
-						onCardClick={() => {
-							onCardClick(card.id)
-						}}
+						{...card}						
 					/>
 				</Link>
 			))}
