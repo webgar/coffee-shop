@@ -13,11 +13,7 @@ const CardList = ({ data, path }) => {
 					to={`${location.pathname}/${card.id}`}
 					className={styles.link}
 				>
-					<Card
-						path={path}
-						key={card.id}
-						{...card}						
-					/>
+					<Card path={path} key={card.id} {...card} />
 				</Link>
 			))}
 		</div>

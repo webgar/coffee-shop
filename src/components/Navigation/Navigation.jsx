@@ -60,7 +60,7 @@ const Navigation = ({ isOpen, displayNoneMenu }) => {
 							className={({ isActive }) =>
 								`${styles.menuLink} ${isActive ? styles.active : ''}`
 							}
-							to='/coffee'
+							to='/coffee-shop/coffee'
 						>
 							Our coffee
 						</NavLink>
@@ -70,7 +70,7 @@ const Navigation = ({ isOpen, displayNoneMenu }) => {
 							className={({ isActive }) =>
 								`${styles.menuLink} ${isActive ? styles.active : ''}`
 							}
-							to='/for-you'
+							to='/coffee-shop/for-you'
 						>
 							For your pleasure
 						</NavLink>

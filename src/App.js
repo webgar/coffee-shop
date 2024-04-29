@@ -26,9 +26,12 @@ function App() {
 			<div className='app'>
 				<Routes>
 					<Route path='/coffee-shop' element={<Home data={data} />} />
-					<Route path='/coffee' element={<OurCoffee data={data} />} />
-					<Route path='/for-you' element={<ForYou data={data} />} />
-					<Route path='/:category/:id' element={<AboutCard data={data} />} />
+					<Route
+						path='/coffee-shop/coffee'
+						element={<OurCoffee data={data} />}
+					/>
+					<Route path='/coffee-shop/for-you' element={<ForYou data={data} />} />
+					<Route path='/coffee-shop/:category/:id' element={<AboutCard data={data} />} />
 					<Route path='*' element={<NotFound />} />
 				</Routes>
 
