@@ -20,21 +20,14 @@ function App() {
 	const isNotFoundPage = match != null
 
 	return (
-		<CardContext.Provider value={{ selectedCardId, setSelectedCardId, handleCardClick }}>
+		<CardContext.Provider
+			value={{ selectedCardId, setSelectedCardId, handleCardClick }}
+		>
 			<div className='app'>
 				<Routes>
-					<Route
-						path='/'
-						element={<Home data={data} />}
-					/>
-					<Route
-						path='/coffee'
-						element={<OurCoffee data={data} />}
-					/>
-					<Route
-						path='/for-you'
-						element={<ForYou data={data} />}
-					/>
+					<Route path='/coffee-shop' element={<Home data={data} />} />
+					<Route path='/coffee' element={<OurCoffee data={data} />} />
+					<Route path='/for-you' element={<ForYou data={data} />} />
 					<Route path='/:category/:id' element={<AboutCard data={data} />} />
 					<Route path='*' element={<NotFound />} />
 				</Routes>

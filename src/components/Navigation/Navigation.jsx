@@ -1,12 +1,12 @@
-import { NavLink } from 'react-router-dom'
 import classNames from 'classnames'
+import { NavLink } from 'react-router-dom'
 import styles from './Navigation.module.css'
 
-const Navigation = ({isOpen, displayNoneMenu}) => {
+const Navigation = ({ isOpen, displayNoneMenu }) => {
 	const classes = classNames(styles.navigation, displayNoneMenu)
 	return (
 		<div className={classes}>
-			<NavLink to='/' className={styles.logoLink}>
+			<NavLink to='/coffee-shop' className={styles.logoLink}>
 				<svg
 					width='35'
 					height='35'
@@ -50,7 +50,7 @@ const Navigation = ({isOpen, displayNoneMenu}) => {
 							className={({ isActive }) =>
 								`${styles.menuLink} ${isActive ? styles.active : ''}`
 							}
-							to='/'
+							to='/coffee-shop'
 						>
 							Coffee house
 						</NavLink>
